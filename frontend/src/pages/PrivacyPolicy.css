@@ -1,0 +1,161 @@
+/* src/pages/PrivacyPolicy.css */
+.privacy-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+  }
+  
+  .privacy-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: var(--spacing-sm);
+  }
+  
+  .privacy-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+  }
+  
+  .privacy-updated {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+    font-style: italic;
+  }
+  
+  .privacy-section {
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+  }
+  
+  /* Removing hover effect to match Contact */
+  .privacy-section:hover {
+    transform: none;
+  }
+  
+  .privacy-intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: var(--spacing-xs);
+  }
+  
+  /* Adding the underline back to match Contact style */
+  .privacy-section .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    display: block;
+  }
+  
+  .privacy-section p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .privacy-section p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Update the contact section to match other sections */
+  .contact-section {
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  .privacy-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .privacy-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add a button style that matches the contact form */
+  .privacy-button {
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+  }
+  
+  .privacy-button:hover {
+    background-color: var(--accent-color-dark, #007bff);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    /* Added to match Contact.css breakpoints */
+  }
+  
+  @media (max-width: 768px) {
+    .privacy-title {
+      font-size: 2rem;
+    }
+    
+    .section-title {
+      font-size: 1.4rem;
+    }
+    
+    .privacy-section {
+      padding: var(--spacing-md);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    /* Added to match Contact.css breakpoints */
+  }
+  
+  @media (max-width: 500px) {
+    .privacy-title {
+      font-size: 1.8rem;
+    }
+    
+    .section-title {
+      font-size: 1.3rem;
+    }
+    
+    .privacy-intro {
+      font-size: 1rem;
+    }
+  }

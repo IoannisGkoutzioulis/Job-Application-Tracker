@@ -1,0 +1,220 @@
+/* src/pages/JobPostings.css */
+.jp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.jp-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.jp-container p {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.jp-filters {
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: var(--spacing-xs);
+}
+
+.jp-filters button {
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.jp-filters button.active {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 600;
+}
+
+.jp-filters button:not(.active):hover {
+  background-color: rgba(67, 97, 238, 0.1);
+  color: var(--accent-color);
+}
+
+.jp-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.jp-actions p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.jp-add-button {
+  display: inline-block;
+  background-color: var(--success-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.jp-add-button:hover {
+  background-color: #2d9200;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.jp-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.jp-table th {
+  background-color: var(--bg-secondary);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.jp-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.jp-table tr:last-child td {
+  border-bottom: none;
+}
+
+.jp-table tr:hover td {
+  background-color: rgba(67, 97, 238, 0.03);
+}
+
+.jp-table tr.closed {
+  background-color: var(--bg-secondary);
+}
+
+.jp-table a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.jp-table a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.jp-edit-link {
+  margin-right: var(--spacing-sm);
+  padding: 0.4rem 0.7rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  transition: var(--transition);
+}
+
+.jp-edit-link:hover {
+  background-color: var(--bg-primary);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  text-decoration: none;
+}
+
+.jp-action-btn {
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.jp-action-btn.close {
+  background-color: rgba(230, 57, 70, 0.1);
+  color: var(--danger-color);
+}
+
+.jp-action-btn.close:hover {
+  background-color: rgba(230, 57, 70, 0.2);
+}
+
+.jp-action-btn.reopen {
+  background-color: rgba(56, 176, 0, 0.1);
+  color: var(--success-color);
+}
+
+.jp-action-btn.reopen:hover {
+  background-color: rgba(56, 176, 0, 0.2);
+}
+
+.jp-empty {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius);
+  margin-top: var(--spacing-lg);
+  color: var(--text-secondary);
+}
+
+.jp-empty p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.jp-loading,
+.jp-error {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius);
+  margin: var(--spacing-lg) 0;
+}
+
+.jp-error {
+  color: var(--danger-color);
+  background-color: rgba(230, 57, 70, 0.05);
+  border: 1px solid rgba(230, 57, 70, 0.2);
+}
+
+/* Responsive Table */
+@media (max-width: 900px) {
+  .jp-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

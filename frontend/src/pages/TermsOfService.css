@@ -1,0 +1,132 @@
+/* src/pages/TermsOfService.css */
+.terms-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+  }
+  
+  .terms-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: var(--spacing-sm);
+  }
+  
+  .terms-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+  }
+  
+  .terms-updated {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+    font-style: italic;
+  }
+  
+  .terms-section {
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .terms-intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: var(--spacing-xs);
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+  
+  .terms-section p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .terms-section p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .contact-section {
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  .terms-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .terms-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    /* Added to match Contact.css breakpoints */
+  }
+  
+  @media (max-width: 768px) {
+    .terms-title {
+      font-size: 2rem;
+    }
+    
+    .section-title {
+      font-size: 1.4rem;
+    }
+    
+    .terms-section {
+      padding: var(--spacing-md);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    /* Added to match Contact.css breakpoints */
+  }
+  
+  @media (max-width: 500px) {
+    .terms-title {
+      font-size: 1.8rem;
+    }
+    
+    .section-title {
+      font-size: 1.3rem;
+    }
+    
+    .terms-intro {
+      font-size: 1rem;
+    }
+  }

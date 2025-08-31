@@ -1,0 +1,264 @@
+/* src/pages/JobSearch.css */
+
+.js-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+/* Target the first h1 inside the js-container */
+.js-container > h1:first-of-type {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-size: 2.2rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--spacing-xs);
+  text-align: left;
+}
+
+/* Add the underline to the first h1 */
+.js-container > h1:first-of-type::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+
+.js-form {
+  margin-bottom: var(--spacing-xl);
+}
+
+.js-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.js-field {
+  flex: 1;
+  min-width: 200px;
+}
+
+.js-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.js-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.js-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+  outline: none;
+}
+
+.js-field-btn {
+  display: flex;
+  align-items: flex-end;
+}
+
+.js-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  width: 100%;
+  transition: var(--transition);
+}
+
+.js-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.js-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.js-error {
+  color: var(--danger-color);
+  margin: var(--spacing-md) 0;
+  background-color: rgba(230, 57, 70, 0.05);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(230, 57, 70, 0.2);
+}
+
+.js-results-title {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--spacing-xs);
+  text-align: left;
+  font-weight: 600;
+}
+
+.js-results-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+
+.js-container h1 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-size: 2rem;
+  text-align: left;
+}
+
+.js-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.js-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  transition: var(--transition);
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.js-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--accent-color);
+  opacity: 0.7;
+}
+
+.js-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.js-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.js-card-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.js-company {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.js-details {
+  margin: var(--spacing-xs) 0 var(--spacing-lg) 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.js-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.js-view-btn,
+.js-apply-btn {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.js-view-btn {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.js-view-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.js-apply-btn {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.js-apply-btn:hover {
+  background-color: #2d9200;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .js-form-row {
+    flex-direction: column;
+  }
+  
+  .js-field {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .js-card-header {
+    flex-direction: column;
+  }
+  
+  .js-company {
+    margin-top: var(--spacing-xs);
+  }
+}

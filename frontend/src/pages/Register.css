@@ -1,0 +1,307 @@
+/* src/pages/Register.css */
+/* Register Container Styles */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+  padding: var(--spacing-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.register-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--spacing-sm);
+}
+
+.register-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  margin: 0 auto;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+
+.register-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+/* Transformed Registration Type Selection to Card-Style */
+.register-type-buttons {
+  display: flex;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.jobseeker-button, .company-button {
+  position: relative;
+  padding: 2rem 1.5rem;
+  min-height: 200px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Add icon placeholder using pseudo-elements */
+.jobseeker-button::before, .company-button::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.jobseeker-button::before {
+  background-color: rgba(67, 97, 238, 0.1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234361ee' viewBox='0 0 24 24'%3E%3Cpath d='M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-2a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm9 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v2z'/%3E%3C/svg%3E");
+}
+
+.company-button::before {
+  background-color: rgba(56, 176, 0, 0.1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2338b000' viewBox='0 0 24 24'%3E%3Cpath d='M21 19h2v2H1v-2h2V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v15h4v-8h-2V9h3a1 1 0 0 1 1 1v9zM5 5v14h8V5H5zm2 6h4v2H7v-2zm0-4h4v2H7V7z'/%3E%3C/svg%3E");
+}
+
+/* Add descriptive text after button text */
+.jobseeker-button::after, .company-button::after {
+  content: '';
+  display: block;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--text-secondary);
+  margin-top: 0.8rem;
+  line-height: 1.4;
+}
+
+.jobseeker-button::after {
+  content: 'Create a profile, apply to jobs, and track your applications';
+}
+
+.company-button::after {
+  content: 'Post job listings, manage applications, and find the right talent';
+}
+
+/* Add top color bars */
+.jobseeker-button::before {
+  border: 2px solid rgba(67, 97, 238, 0.2);
+}
+
+.company-button::before {
+  border: 2px solid rgba(56, 176, 0, 0.2);
+}
+
+.jobseeker-button:hover, .company-button:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.jobseeker-button:hover {
+  border-color: var(--accent-color);
+}
+
+.company-button:hover {
+  border-color: var(--success-color);
+}
+
+/* Make button text more prominent */
+.jobseeker-button span, .company-button span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Rest of the CSS remains the same */
+.register-form-container {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-xl);
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.register-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--accent-color);
+}
+
+.form-title {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Form Input Styles */
+.form-row {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: left;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+/* Button Styles */
+.register-button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: var(--spacing-md);
+  font-weight: 500;
+}
+
+.register-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.register-button.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error Message Styles */
+.error-message {
+  color: var(--danger-color);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background-color: rgba(230, 57, 70, 0.05);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  border: 1px solid rgba(230, 57, 70, 0.2);
+}
+
+/* Login Link Styles */
+.login-link-text {
+  margin-top: var(--spacing-lg);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.login-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.login-link:hover {
+  text-decoration: underline;
+  color: var(--accent-hover);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .register-title {
+    font-size: 2.2rem;
+  }
+  
+  .register-type-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .jobseeker-button, .company-button {
+    max-width: 100%;
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .register-form-container {
+    padding: var(--spacing-lg);
+  }
+  
+  .jobseeker-button::after, .company-button::after {
+    font-size: 0.8rem;
+  }
+}

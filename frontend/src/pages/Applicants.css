@@ -1,0 +1,355 @@
+/* src/pages/Applicants.css */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.app-title {
+  margin-bottom: var(--spacing-xs);
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.app-subtitle {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.app-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xl);
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+}
+
+.app-filters::-webkit-scrollbar {
+  height: 4px;
+}
+
+.app-filters::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+.app-filter {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.app-filter.active {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 600;
+}
+
+.app-filter:hover:not(.active) {
+  background-color: rgba(67, 97, 238, 0.1);
+  color: var(--accent-color);
+}
+
+.app-job-select {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.app-job-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+  outline: none;
+}
+
+.app-stats {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.app-stat-card {
+  flex: 1;
+  min-width: 120px;
+  padding: var(--spacing-md);
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--accent-color);
+  opacity: 0.7;
+}
+
+.app-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.app-stat-count {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 1.2;
+}
+
+.app-stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: var(--spacing-xs);
+}
+
+.app-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.app-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.app-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.app-card-header h3 {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.app-badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.app-badge.new {
+  background-color: rgba(56, 176, 0, 0.15);
+  color: var(--success-color);
+}
+
+.app-badge.under-review {
+  background-color: rgba(255, 183, 3, 0.15);
+  color: var(--warning-color);
+}
+
+.app-badge.shortlisted {
+  background-color: rgba(67, 97, 238, 0.15);
+  color: var(--accent-color);
+}
+
+.app-badge.interviewed {
+  background-color: rgba(67, 97, 238, 0.15);
+  color: var(--accent-color);
+}
+
+.app-badge.rejected {
+  background-color: rgba(230, 57, 70, 0.15);
+  color: var(--danger-color);
+}
+
+.app-field {
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.95rem;
+}
+
+.app-field strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.app-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.app-skill {
+  background-color: var(--bg-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.app-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.app-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.app-btn.view {
+  background-color: var(--accent-color);
+  color: white;
+  flex: 1;
+}
+
+.app-btn.view:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.app-btn.resume {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  flex: 1;
+}
+
+.app-btn.resume:hover {
+  background-color: rgba(67, 97, 238, 0.05);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.app-select {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: var(--transition);
+  min-width: 150px;
+}
+
+.app-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+  outline: none;
+}
+
+.app-empty {
+  padding: var(--spacing-xl);
+  text-align: center;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius);
+  margin-top: var(--spacing-lg);
+  color: var(--text-secondary);
+}
+
+.app-empty p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.app-btn.back {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  display: inline-block;
+}
+
+.app-btn.back:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.applicant-stats-box {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border-radius: var(--radius);
+  padding: 1.2rem 1rem;
+  text-align: center;
+  min-width: 120px;
+  margin: 0 10px 20px 0;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.applicant-stats-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.applicant-stats-box .count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.applicant-stats-box .label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-stats {
+    flex-direction: column;
+  }
+  
+  .app-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .app-select {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+  }
+}
